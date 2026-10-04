@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #050b14; /* Extremely dark blue-black, very premium */
+  --color-brand-secondary: #3b82f6; /* Vibrant Blue */
+  --color-brand-accent: #0ea5e9; /* Sky Blue */
+  --color-brand-success: #10b981;
+  --color-brand-warning: #f59e0b;
+  --color-brand-critical: #ef4444;
+  --color-brand-sidebar: #0a1120; /* Slightly lighter deep blue for sidebar */
+  
+  --color-background: #050b14;
+  --color-foreground: #f8fafc;
+  --color-card: #0a1120;
+  --color-border: #1e293b;
+}
+
+:root {
+  --background: #050b14;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

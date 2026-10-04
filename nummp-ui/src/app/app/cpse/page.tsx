@@ -1,0 +1,1 @@
+export default function PlaceholderPage() { return <div className='p-6 flex flex-col items-center justify-center h-full'><h1 className='text-2xl font-bold text-slate-200 mb-2'>Coming Soon</h1><p className='text-slate-400'>This page (cpse) is under construction for the demo.</p></div>; }
