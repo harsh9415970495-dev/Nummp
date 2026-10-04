@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMMP - Complete Technical & Product Documentation</title>
+    <style>
+        :root {
+            --primary-color: #0ea5e9;
+            --secondary-color: #3b82f6;
+            --bg-color: #050b14;
+            --surface-color: #0f172a;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: var(--text-color);
+            margin-top: 30px;
+            background-color: var(--surface-color);
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: rgba(14, 165, 233, 0.1);
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            background-color: rgba(15, 23, 42, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(30, 41, 59, 0.8);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--surface-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NUMMP: National Unified Material Master Platform</h1>
+            <div class="subtitle">Complete Technical & Product Documentation (Hinglish)</div>
+            <p style="margin-top: 20px; color: var(--text-muted);"><i>"One Nation – One Material Code"</i></p>
+        </header>
+
+        <section>
+            <h2>1. Project Ka Main Idea (Executive Summary)</h2>
+            <div class="card">
+                <p><strong>NUMMP</strong> ek AI-powered platform hai jiska ultimate goal alag-alag CPSEs (Central Public Sector Enterprises) jaise CPCL, IOCL, ONGC, BPCL ke material codes ko ek single identity ke under lana hai.</p>
+                <p>Kyunki ek hi item (jaise Pipe ya Valve) alag-alag companies mein alag naam, alag units, aur alag format mein store hota hai, is platform ka kaam NLP, Semantic AI, Machine Learning aur Engineering Rules ka use karke in "alag dikhne wale" materials ko pehchanna aur unko ek unified <strong>Common National Material Code (CNMC)</strong> se link karna hai.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Problem aur Uska Solution Detail Mein</h2>
+            
+            <h3>🔴 The Problem (Samasya Kya Hai?)</h3>
+            <p>Har CPSE ka apna ERP/SAP system hota hai. Agar CPCL ne ek material ka naam <span class="highlight">HEX BLT SS316 M12X50</span> rakha hai, toh ho sakta hai IOCL ne usi same bolt ka naam <span class="highlight">BOLT, HEXAGONAL, STAINLESS STEEL 316, 12MM DIA X 50MM LG</span> rakha ho. Iski wajah se:</p>
+            <ul>
+                <li><strong>Duplicate Inventory:</strong> Pata hi nahi chalta ki same item dusre plant mein pada hai.</li>
+                <li><strong>Bulk Buying nahi hoti:</strong> Agar sab alag-alag kharidenge toh price negotiation nahi milta.</li>
+                <li><strong>Normal Search Fail:</strong> Keyword search isme fail ho jati hai kyunki naam completely alag likhe hue hain.</li>
+            </ul>
+
+            <h3>🟢 The Solution (Hamara AI Platform)</h3>
+            <p>NUMMP platform purane codes ko delete ya replace nahi karta. Ye ek central "Hub" ki tarah act karta hai. Ye AI ka use karke material ke text ki <em>meaning</em> samajhta hai, uske andar chhupe <em>attributes</em> (jaise size, pressure rating) nikalta hai, aur unhe aapas mein compare karke unhe ek Central Code (CNMC) assign kar deta hai. Isse traceability bhi rehti hai aur ek unified view bhi mil jata hai.</p>
+        </section>
+
+        <section>
+            <h2>3. Website Ke Features Aur Wo Kaise Kaam Karte Hain</h2>
+            <p>Hamari website ek complete portal hai jahan material admin pura process manage kar sakta hai. Website ke har ek page ka ek specific role hai:</p>
+
+            <div class="card">
+                <h3>📊 1. Dashboard & Analytics (/app/dashboard)</h3>
+                <p><strong>Ye kya karta hai:</strong> Ye platform ka main control panel hai. Yahan par pure system ka overview milta hai.</p>
+                <p><strong>Details:</strong> Isme dikhaya jata hai ki total kitne material records sabhi CPSEs se aaye hain, kitne perfectly standardize ho gaye hain, duplicate trend pichle mahino mein kaisa raha hai, aur kaunse category (jaise Fasteners, Valves) mein sabse zyada duplicates mil rahe hain. Ye management ke liye savings aur progress track karne ki jagah hai.</p>
+
+                <h3>🧠 2. Data Ingestion & NLP Pipeline (/app/nlp)</h3>
+                <p><strong>Ye kya karta hai:</strong> Raw unstructured kachre (text) ko saaf aur samajhne layaq (structured) data mein badalna.</p>
+                <p><strong>Details:</strong> Jab ERP se raw text aata hai, toh NLP (Natural Language Processing) pipeline usme se abbreviations ko theek karti hai (jaise <code>SS</code> = Stainless Steel). Uske baad NER (Named Entity Recognition) model text me se Engineering attributes nikalta hai jaise ki "Type = Valve", "Metallurgy = SS316", "Size = 2 INCH". Ye pura process yahan live feed mein dikhaya jata hai.</p>
+
+                <h3>🔍 3. AI Material Matching (/app/matching)</h3>
+                <p><strong>Ye kya karta hai:</strong> AI ke through same meaning wale materials ko aas-paas (vector space mein) lana.</p>
+                <p><strong>Details:</strong> Har description ko numbers (Embeddings) mein badal diya jata hai. Is page par dikhaya jata hai ki kaise Cosine Similarity ka use karke AI search karta hai (Top-K Candidate Retrieval). User yahan dekh sakta hai ki Material A (CPCL ka) aur Material B (IOCL ka) aapas mein kitne percent match ho rahe hain aur unke specific attributes aapas mein kaise compare hote hain.</p>
+
+                <h3>⚖️ 4. Decision Engine & Guardrails (/app/decision-engine)</h3>
+                <p><strong>Ye kya karta hai:</strong> AI se hone wali bewakoofi (hallucination) ko rokna aur engineering safety lagana.</p>
+                <p><strong>Details:</strong> NLP aur Semantic Similarity kabhi-kabhi dhoka kha sakte hain. Jaise ki "Pipe 150 PSI" aur "Pipe 300 PSI" text mein 95% similar lagte hain, lekin engineering level pe ye completely alag hain. Ye page dikhata hai ki kaise hamare <strong>Hard-Conflict Veto</strong> rules kaam karte hain. Agar critical spec (jaise Pressure Rating) mismatch hota hai, toh platform automatic mapping ko block kar deta hai, bhale hi AI ka similarity score 99% kyun na ho.</p>
+
+                <h3>👥 5. Human-in-the-Loop Reviews (/app/reviews)</h3>
+                <p><strong>Ye kya karta hai:</strong> AI jo decide nahi kar pata, use Insaan (Expert) ke paas bhejna.</p>
+                <p><strong>Details:</strong> Agar AI ka confidence score 75% se 91% ke beech hai, toh wo automatically map nahi karta. Wo is page (Validation Queue) par pending mein aa jata hai. Yahan expert ek beautiful Side-by-Side Comparison screen dekhta hai jahan AI batata hai ki usko kyun lagta hai ye same hai aur kya conflict ho sakta hai. Expert apni knowledge se isko <strong>Approve, Reject ya Escalate</strong> kar sakta hai.</p>
+
+                <h3>🏷️ 6. CNMC Registry (/app/cnmc)</h3>
+                <p><strong>Ye kya karta hai:</strong> Unified identity store karna aur track rakhna.</p>
+                <p><strong>Details:</strong> Jab duplicates approve ho jate hain, toh unko ek Common National Material Code (jaise <code>NMC-BRG-000452</code>) de diya jata hai. Is page par CNMC ki list hoti hai aur har CNMC ke andar click karne par pata chalta hai ki ye ek specific material kin-kin alag-alag CPSEs mein kis-kis purane (legacy) code se mapped hai.</p>
+
+                <h3>🏭 7. Cross-CPSE Virtual Warehouse (/app/inventory)</h3>
+                <p><strong>Ye kya karta hai:</strong> Procurement optimize karna aur stock search karna.</p>
+                <p><strong>Details:</strong> Ye system ka sabse faaydemand feature hai. Agar BPCL ko ek urgent Valve chahiye, toh naya kharidne ke bajaye, wo is page par search karke dekh sakte hain ki ONGC ya IOCL ke kis plant mein ye same Valve surplus (extra) pada hua hai aur wo transfer request generate kar sakte hain.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.5 SIH Demo Strategy: Core Pages vs Under Construction</h2>
+            <p>NUMMP ek bahut bada ecosystem hai. Ek hackathon (SIH 2026) demo ko perfect aur focused rakhne ke liye, humne system ko do hisso mein baata hai:</p>
+            
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
+                <div class="card" style="flex: 1; min-width: 300px; border-top: 4px solid var(--primary-color);">
+                    <h4 style="margin-top: 0; color: var(--text-color);">✅ Fully Built Core Pages (For Presentation)</h4>
+                    <p style="font-size: 0.95rem;">Ye wo pages hain jo PDF ke <strong>Section 28 (Recommended Demo Flow)</strong> par aadharit hain aur fully working hain. Presentation ke time aapko sirf inhi par focus karna chahiye:</p>
+                    <ul style="font-size: 0.9rem; margin-bottom: 0;">
+                        <li>Dashboard (/app/dashboard)</li>
+                        <li>Data Ingestion & NLP (/app/nlp)</li>
+                        <li>AI Material Matching (/app/matching)</li>
+                        <li>Decision Engine (/app/decision-engine)</li>
+                        <li>Human Review (/app/reviews)</li>
+                        <li>CNMC Registry (/app/cnmc)</li>
+                        <li>Cross-CPSE Inventory (/app/inventory)</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="flex: 1; min-width: 300px; border-top: 4px solid var(--text-muted);">
+                    <h4 style="margin-top: 0; color: var(--text-color);">🚧 Under Construction (Future Scope)</h4>
+                    <p style="font-size: 0.95rem;">Baki supplementary links (jaise ERP Integrations, Procurement, Audit, Settings) intentionally <strong>"Under Construction"</strong> rakhe gaye hain. Ye judges ko dikhane ke liye hote hain ki <em>"System scalable hai aur aage ye modules bhi ayenge, par abhi hamara core AI engine par focus hai."</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. User Workflow (Website Ko Use Karne Ke Detailed Steps)</h2>
+            <p>Ek material data administrator ya engineer jab is website ko use karega, toh uska aam din (workflow) kuch is tarah hoga:</p>
+
+            <div class="workflow-step">
+                <div class="step-number">1</div>
+                <div>
+                    <strong>Secure Login Aur Platform Access:</strong> User premium Login page par aayega aur e-Pramaan SSO (Single Sign-On) ya CPSE credentials ka use karke securely authenticate karega.
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">2</div>
+                <div>
+                    <strong>Overview & Tracking:</strong> Login ke baad sidha Dashboard open hoga. User dekhega ki aaj kitne naye materials ingest hue hain aur kitne reviews pending hain.
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">3</div>
+                <div>
+                    <strong>Expert Validation Queue Manage Karna:</strong> User sidebar se 'Human Review' page par jayega. Wahan usko "High Risk" ya "Medium Confidence" wale pairs dikhenge.
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">4</div>
+                <div>
+                    <strong>Side-by-Side Review:</strong> User kisi ek item par click karega. Ek drawer open hoga jisme left side par CPCL ka data hoga, right side par IOCL ka, aur niche AI ka justification hoga. User attributes compare karega.
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">5</div>
+                <div>
+                    <strong>Decision Lena:</strong> Agar attributes match hote hain, toh user "APPROVE MAPPING" par click karega. Isse wo material automatically CNMC cluster mein add ho jayega.
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="step-number">6</div>
+                <div>
+                    <strong>Stock Search (Optional):</strong> Agar user ko koi requirement aati hai, toh wo "Cross-CPSE Inventory" mein jaakar directly material search karega bina ye soche ki dusri company us material ko kya bolti hai, kyunki NUMMP ye mapping already janta hai.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Full Technical Architecture & Tech Flow (Backend Structure)</h2>
+            <p>Hamara system ek <strong>Hub-and-Spoke Architecture</strong> follow karta hai. NUMMP central hub hai, aur baaki sabhi ERP (SAP) systems uske spokes hain.</p>
+
+            <h3>💻 Technology Stack (Tech Stack Kya Use Hua Hai?)</h3>
+            <table>
+                <tr>
+                    <th>Layer</th>
+                    <th>Technologies Used</th>
+                    <th>Reason (Kyun Use Hua?)</th>
+                </tr>
+                <tr>
+                    <td><strong>Frontend / UI</strong></td>
+                    <td>Next.js (React), Tailwind CSS, Framer Motion</td>
+                    <td>Fast, scalable, SEO friendly aur Framer Motion se premium animations milti hain (jaise Login page ka glassmorphism).</td>
+                </tr>
+                <tr>
+                    <td><strong>Backend APIs</strong></td>
+                    <td>Python, FastAPI, Celery</td>
+                    <td>FastAPI async processing mein fastest hai. Celery background mein lakho records ko match karne ka heavy data processing kaam karta hai.</td>
+                </tr>
+                <tr>
+                    <td><strong>AI & NLP Core</strong></td>
+                    <td>Hugging Face Transformers (Sentence-BERT), spaCy</td>
+                    <td>Sentence-BERT texts ka matlab (semantics) samajhne aur embeddings banane ke liye best hai. spaCy custom NER (Entity extraction) ke liye.</td>
+                </tr>
+                <tr>
+                    <td><strong>Vector Search</strong></td>
+                    <td>FAISS / Milvus</td>
+                    <td>Jab lakho records honge, toh normal database search slow ho jayega. FAISS Approximate Nearest Neighbor (ANN) search karke milliseconds mein similar records nikalta hai.</td>
+                </tr>
+                <tr>
+                    <td><strong>Database</strong></td>
+                    <td>PostgreSQL, JSONB</td>
+                    <td>Master data relational format mein rakha jata hai aur specific engineering schemas ko dynamic rakhne ke liye JSONB use hota hai.</td>
+                </tr>
+            </table>
+
+            <h3>⚙️ Pura Tech Pipeline Flow (Kaise data process hota hai?)</h3>
+            <ol>
+                <li><strong>Ingestion (Data Aana):</strong> ERP systems se file ya API ke through raw material data NUMMP backend mein aata hai.</li>
+                <li><strong>Data Cleaning (Safai):</strong> Ek custom Python script kachre (noise), extra spaces aur ajeeb symbols ko hatati hai. UOM (Units of Measure) library jaise <code>pint</code> inch ko mm mein normalize karti hai.</li>
+                <li><strong>NLP Feature Extraction:</strong> spaCy model run hota hai jo text mein se categories aur dimensions nikalta hai.</li>
+                <li><strong>Semantic Embedding Generation:</strong> Sentence-BERT us pure saaf kiye hue description ko 384-dimension (ya 768-dimension) numeric vectors mein badal deta hai.</li>
+                <li><strong>Vector Match & Candidate Retrieval:</strong> FAISS database in vectors ko compare karta hai (Cosine Similarity) aur top 5 ya 10 matches retrieve karta hai.</li>
+                <li><strong>Composite Scoring & ML Classification:</strong> Ek Machine Learning classifier model (jaise XGBoost) in matches par ek final Confidence Score lagata hai jo text similarity aur attribute match ka weighted average hota hai.</li>
+                <li><strong>Engineering Rule Engine (Guardrails):</strong> Agar confidence score 95% bhi ho, toh Rule Engine check karta hai. Agar Hard Rules (jaise Pressure Rating mismatch) fail ho jate hain, toh engine automatically score ignore karke use block karta hai.</li>
+                <li><strong>Decision Routing:</strong>
+                    <ul>
+                        <li><span class="highlight">Score &ge; 92%</span> ➡️ Auto-Harmonize (Sidha CNMC assign hota hai).</li>
+                        <li><span class="highlight">75% - 91%</span> ➡️ Human Review Dashboard mein bheja jata hai.</li>
+                        <li><span class="highlight">&lt; 75%</span> ➡️ Unique variant mark karke reject kar diya jata hai.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <footer style="margin-top: 60px; text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; color: var(--text-muted); font-size: 0.9rem;">
+            <p>Generated by NUMMP AI System • Confidential & Proprietary Information</p>
+        </footer>
+    </div>
+</body>
+</html>
