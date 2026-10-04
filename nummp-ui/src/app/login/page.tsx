@@ -29,7 +29,7 @@ export default function LoginPage() {
     }, 2000);
   };
 
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
@@ -37,7 +37,7 @@ export default function LoginPage() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { y: 20, opacity: 0 },
     visible: { 
       y: 0, 
